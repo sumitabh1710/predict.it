@@ -3,17 +3,19 @@
 }
 
 .nav_menu:hover {
-  background-color: #adadad;
-  border-radius: 4px;
+  background-color: hsla(236, 9%, 39%, 0.3);
+  border-radius: 6px;
 }
 
 .button_light {
+  border: 1px solid #1f2833;
   transition: all 200ms linear;
 }
 
 .button_light:hover {
-  color: #557a95;
-  background-color: #adadad;
+  color: #557a95 !important;
+  border-color: #557a95;
+  background-color: hsla(236, 9%, 39%, 0.3);
   border-radius: 4px;
 }
 
@@ -24,4 +26,13 @@
 
 .button_dark:hover {
   background-color: #557a95;
+}
+
+.bottom_menu {
+  color: rgba(0, 0, 0, 0.54);
+  transition: all 50ms ease-in;
+}
+
+.bottom_menu:hover {
+  border-bottom: 3px solid hsla(236, 9%, 39%, 0.3);
 }
