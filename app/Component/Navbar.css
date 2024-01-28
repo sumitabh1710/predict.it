@@ -1,5 +1,13 @@
 .nav_menu {
+  font-family: "Teko", sans-serif;
+  font-weight: 700;
   transition: all 200ms linear;
+}
+
+.title_nav {
+  background: var(--primary-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav_menu:hover {
@@ -7,25 +15,17 @@
   border-radius: 6px;
 }
 
-.button_light {
-  border: 1px solid #1f2833;
-  transition: all 200ms linear;
-}
-
-.button_light:hover {
-  color: #557a95 !important;
-  border-color: #557a95;
-  background-color: hsla(236, 9%, 39%, 0.3);
-  border-radius: 4px;
-}
-
 .button_dark {
-  background-color: #1f2833;
+  color: whitesmoke;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 2px var(--primary-color);
+  background: var(--primary-color);
   transition: all 200ms linear;
 }
 
 .button_dark:hover {
-  background-color: #557a95;
+  transform: scale(1.1);
+  filter: drop-shadow(4px 4px 5px #8e2de2) invert(0%);
 }
 
 .bottom_menu {

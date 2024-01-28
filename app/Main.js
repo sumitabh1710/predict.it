@@ -14,7 +14,7 @@ const Main = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <div className="min-h-screen">
+      <div className="min-h-screen my-20">
         <HomePage></HomePage>
       </div>
       <div className="">{windowWidth < 768 && <BottomMenu></BottomMenu>}</div>

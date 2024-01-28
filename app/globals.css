@@ -1,11 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: linear-gradient(to right, #8e2de2, #4a00e0);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +27,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Teko", sans-serif;
 }
 
 @layer utilities {
