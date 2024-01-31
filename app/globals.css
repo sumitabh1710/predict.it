@@ -7,8 +7,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --primary-color: linear-gradient(to right, #8e2de2, #4a00e0);
-
+  --primary-color: #2f3c7e;
+  --secondary-color: #f0f0f0;
+  --onHover-color: hsla(236, 9%, 39%, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,14 +22,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
   font-family: "Teko", sans-serif;
 }
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
 
 @layer utilities {
   .text-balance {

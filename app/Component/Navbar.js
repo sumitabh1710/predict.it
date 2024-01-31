@@ -10,9 +10,11 @@ import LocalLibraryOutlinedIcon from "@mui/icons-material/LocalLibraryOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import PopUpHover from "./Common/PopUpHover/PopUpHover";
 import useWindowDimensions from "./Utils/useWindowDimensions";
+import PopUpModal from "./Common/PopUpModal/PopUpModal";
 
 const Navbar = () => {
   const [menuPopUpShow, setMenuPopUpShow] = useState(false);
+  const [popUpModalShow, setPopUpModalShow] = useState(false);
 
   const bottomFilterData = [
     { id: 1, name: "All" },
@@ -29,10 +31,10 @@ const Navbar = () => {
   const { windowWidth, windowHeight } = useWindowDimensions();
 
   return (
-    <div className="fixed w-full h-fit bg-slate-50 z-10">
-      <div className="flex px-6 py-4 md:pt-7 md:pb-0">
+    <div className="navbar fixed w-full h-fit">
+      <div className="flex flex-wrap px-6 py-4 md:pt-7 md:pb-0">
         <div className="flex items-center justify-start w-1/2">
-          <p className="title_nav font-mono text-3xl font-bold">SaasBazaar</p>
+          <p className="title_nav font-mono text-3xl font-bold">Predict.it</p>
           <Searchbar></Searchbar>
         </div>
         <div className="flex items-center justify-end w-1/2">
@@ -81,7 +83,10 @@ const Navbar = () => {
               Learn
             </p>
           </div>
-          <div className="button_dark md:flex hidden flex-col justify-center items-center cursor-pointer text-sm font-semibold mx-2 px-4 rounded h-10">
+          <div
+            className="button_dark md:flex hidden flex-col justify-center items-center cursor-pointer text-sm font-semibold mx-2 px-4 rounded h-10"
+            onClick={() => setPopUpModalShow(true)}
+          >
             Log In
           </div>
           <div className="button_dark md:flex hidden flex-col justify-center items-center cursor-pointer text-sm mx-2 px-4 rounded h-10">
@@ -107,10 +112,12 @@ const Navbar = () => {
                 color="action"
                 fontSize="medium"
               ></MenuOutlinedIcon>
-              <PopUpHover
-                setMenuPopUpShow={setMenuPopUpShow}
-                menuPopUpShow={menuPopUpShow}
-              ></PopUpHover>
+              {menuPopUpShow && (
+                <PopUpHover
+                  setMenuPopUpShow={setMenuPopUpShow}
+                  menuPopUpShow={menuPopUpShow}
+                ></PopUpHover>
+              )}
             </div>
           )}
         </div>
@@ -122,6 +129,14 @@ const Navbar = () => {
           </div>
         ))}
       </div>
+      {popUpModalShow && (
+        <PopUpModal
+          popUpModalShow={popUpModalShow}
+          setPopUpModalShow={setPopUpModalShow}
+        >
+          <div className="flex justify-center items-center text-black">its working</div>
+        </PopUpModal>
+      )}
     </div>
   );
 };

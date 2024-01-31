@@ -1,3 +1,13 @@
+.navbar {
+  background-color: var(--secondary-color);
+  z-index: 10;
+}
+
+.bottom_bar {
+  background-color: var(--secondary-color);
+  z-index: 10;
+}
+
 .nav_menu {
   font-family: "Teko", sans-serif;
   font-weight: 700;
@@ -11,7 +21,7 @@
 }
 
 .nav_menu:hover {
-  background-color: hsla(236, 9%, 39%, 0.3);
+  background-color: var(--onHover-color);
   border-radius: 6px;
 }
 
@@ -25,7 +35,6 @@
 
 .button_dark:hover {
   transform: scale(1.1);
-  filter: drop-shadow(4px 4px 5px #8e2de2) invert(0%);
 }
 
 .bottom_menu {
@@ -34,5 +43,5 @@
 }
 
 .bottom_menu:hover {
-  border-bottom: 3px solid hsla(236, 9%, 39%, 0.3);
+  border-bottom: 3px solid var(--onHover-color);
 }

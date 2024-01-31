@@ -1,1 +1,9 @@
+.market_tiles {
+  box-shadow: 0 2px 4px 0 hsla(236, 9%, 39%, 0.05);
+  transition: all 300ms ease-out;
+}
 
+.market_tiles:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 hsla(236, 9%, 39%, 0.3);
+}

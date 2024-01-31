@@ -2,56 +2,52 @@ import React from "react";
 import "./HorizontalTabs.css";
 
 const HorizontalTabs = () => {
+  const horizontalTabsData = [
+    {
+      id: 1,
+      name: "Top",
+    },
+    {
+      id: 2,
+      name: "Communication",
+    },
+    {
+      id: 3,
+      name: "Entertainment",
+    },
+    {
+      id: 4,
+      name: "Navigation",
+    },
+    {
+      id: 5,
+      name: "Productivity",
+    },
+    {
+      id: 6,
+      name: "Health",
+    },
+    {
+      id: 7,
+      name: "Top",
+    },
+  ];
+
   return (
-    <div className="flex overflow-x-scroll">
-      <div
-        className="h-10 mx-2 bg-slate-500 w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          All
-        </p>
-      </div>
-      <div
-        className="h-10 mx-2 bg-slate-500 text-sm font-bold w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px", letterSpacing: "1px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          Communication
-        </p>
-      </div>
-      <div
-        className="h-10 mx-2 bg-slate-500 text-sm font-bold w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px", letterSpacing: "1px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          Entertainment
-        </p>
-      </div>
-      <div
-        className="h-10 mx-2 bg-slate-500 text-sm font-bold w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px", letterSpacing: "1px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          Navigation
-        </p>
-      </div>
-      <div
-        className="h-10 mx-2 bg-slate-500 text-sm font-bold w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px", letterSpacing: "1px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          Productivity
-        </p>
-      </div>
-      <div
-        className="h-10 mx-2 bg-slate-500 text-sm font-bold w-fit px-3 flex items-center justify-center"
-        style={{ borderRadius: "20px", letterSpacing: "1px" }}
-      >
-        <p className="text-sm font-bold" style={{ letterSpacing: "1px" }}>
-          Health
-        </p>
-      </div>
+    <div className="horizontal_tabs flex overflow-x-scroll">
+      {horizontalTabsData.map((each) => {
+        return (
+          <div
+            className="tabs h-10 cursor-pointer mx-2 w-fit px-3 flex items-center justify-center"
+            style={{ borderRadius: "20px" }}
+            key={each.id}
+          >
+            <p className="text-sm font-semibold text-slate-700" style={{ letterSpacing: "1px" }}>
+              {each.name}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
 };

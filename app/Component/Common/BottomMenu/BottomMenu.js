@@ -9,7 +9,7 @@ import "../../Navbar.css";
 const BottomMenu = () => {
   return (
     <div
-      className="fixed flex justify-around bottom-0 h-16 w-full bg-slate-50"
+      className="bottom_bar fixed flex justify-around bottom-0 h-16 w-full"
     >
       <div className="nav_menu flex flex-col justify-center items-center px-4 py-1 cursor-pointer">
         <HomeIcon color="action" fontSize="small"></HomeIcon>

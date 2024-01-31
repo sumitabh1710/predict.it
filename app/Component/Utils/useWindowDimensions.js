@@ -1,23 +1,32 @@
-"use client";
-
 import { useState, useEffect } from "react";
 
 const useWindowDimensions = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const isClient = typeof window === "object";
+
+  const [windowWidth, setWindowWidth] = useState(
+    isClient ? window.innerWidth : 0
+  );
+  const [windowHeight, setWindowHeight] = useState(
+    isClient ? window.innerHeight : 0
+  );
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+    if (isClient) {
+      setWindowWidth(window?.innerWidth || 0);
+      setWindowHeight(window?.innerHeight || 0);
+    }
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    if (isClient) {
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [isClient]);
+
   return { windowWidth, windowHeight };
 };
 
