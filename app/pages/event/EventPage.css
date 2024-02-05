@@ -1,0 +1,42 @@
+.tag_label {
+  background-color: var(--secondary-color);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+}
+
+.buy_sell_mobile_menu {
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--onHover-color);
+}
+
+.buy_sell_mobile_menu_options {
+  background-color: var(--onHover-color);
+}
+
+.order_book_dropdown {
+  border: 1px solid var(--onHover-color);
+  border-radius: 10px;
+}
+
+.dropdown_arrow {
+  transition: all 300ms ease-out;
+}
+
+.order_book_content {
+  transition: all 300ms ease-out;
+}
+
+.buy_button {
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--yes-label-color);
+}
+
+.sell_button {
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--no-label-color);
+}

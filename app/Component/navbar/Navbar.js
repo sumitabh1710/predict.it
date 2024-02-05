@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import Searchbar from "./Common/Searchbar/Searchbar";
+import Searchbar from "../Common/Searchbar/Searchbar";
 import "./Navbar.css";
 import AppsSharpIcon from "@mui/icons-material/AppsSharp";
 import ShowChartOutlinedIcon from "@mui/icons-material/ShowChartOutlined";
 import LeaderboardOutlinedIcon from "@mui/icons-material/LeaderboardOutlined";
 import LocalLibraryOutlinedIcon from "@mui/icons-material/LocalLibraryOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import PopUpHover from "./Common/PopUpHover/PopUpHover";
-import useWindowDimensions from "./Utils/useWindowDimensions";
-import PopUpModal from "./Common/PopUpModal/PopUpModal";
+import PopUpHover from "../Common/PopUpHover/PopUpHover";
+import useWindowDimensions from "../Utils/useWindowDimensions";
+import PopUpModal from "../Common/PopUpModal/PopUpModal";
 
 const Navbar = () => {
   const [menuPopUpShow, setMenuPopUpShow] = useState(false);
@@ -31,7 +31,7 @@ const Navbar = () => {
   const { windowWidth, windowHeight } = useWindowDimensions();
 
   return (
-    <div className="navbar fixed w-full h-fit">
+    <div className="navbar flex flex-col justify-between h-full w-full" id="navbar">
       <div className="flex flex-wrap px-6 py-4 md:pt-7 md:pb-0">
         <div className="flex items-center justify-start w-1/2">
           <p className="title_nav font-mono text-3xl font-bold">Predict.it</p>
@@ -112,7 +112,7 @@ const Navbar = () => {
                 color="action"
                 fontSize="medium"
               ></MenuOutlinedIcon>
-              {menuPopUpShow && (
+              {!menuPopUpShow && (
                 <PopUpHover
                   setMenuPopUpShow={setMenuPopUpShow}
                   menuPopUpShow={menuPopUpShow}
@@ -122,10 +122,10 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className="md:flex  hidden h-10 px-6 mt-3 w-fit">
+      <div className="bottom_menu flex overflow-scroll h-10 px-6 mt-3 w-screen">
         {bottomFilterData.map((each) => (
-          <div className="bottom_menu py-2 mx-3 cursor-pointer" key={each.id}>
-            <p className="text-sm font-medium">{each.name}</p>
+          <div className="bottom_menu_options py-2 mx-3 cursor-pointer" key={each.id}>
+            <p className="text-sm font-medium whitespace-nowrap">{each.name}</p>
           </div>
         ))}
       </div>
@@ -134,7 +134,9 @@ const Navbar = () => {
           popUpModalShow={popUpModalShow}
           setPopUpModalShow={setPopUpModalShow}
         >
-          <div className="flex justify-center items-center text-black">its working</div>
+          <div className="flex justify-center items-center text-black">
+            its working
+          </div>
         </PopUpModal>
       )}
     </div>

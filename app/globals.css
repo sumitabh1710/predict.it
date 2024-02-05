@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;600;700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -10,6 +10,10 @@
   --primary-color: #2f3c7e;
   --secondary-color: #f0f0f0;
   --onHover-color: hsla(236, 9%, 39%, 0.3);
+  --yes-token-color: #27ae601a;
+  --yes-label-color: #27ae60;
+  --no-token-color: #eb57571a;
+  --no-label-color: #e64800;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +26,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: black;
   font-family: "Teko", sans-serif;
+  transition: all 200ms ease-out;
 }
 
 /* ::-webkit-scrollbar {

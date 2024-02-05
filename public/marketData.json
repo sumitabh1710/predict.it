@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Stock X +10% next month ?",
+    "tag": "Finance",
+    "yes": 120,
+    "no": 80,
+    "totalBetPrice": 50000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 2,
+    "name": "Country Y election winner ?",
+    "tag": "Politics",
+    "yes": 200,
+    "no": 150,
+    "totalBetPrice": 75000,
+    "yesTokenPrice": 40,
+    "noTokenPrice": 60
+  },
+  {
+    "id": 3,
+    "name": "Product Z success next year ?",
+    "tag": "Market",
+    "yes": 80,
+    "no": 50,
+    "totalBetPrice": 30000,
+    "yesTokenPrice": 45,
+    "noTokenPrice": 55
+  },
+  {
+    "id": 4,
+    "name": "Company A folding screen ?",
+    "tag": "Technology",
+    "yes": 60,
+    "no": 40,
+    "totalBetPrice": 20000,
+    "yesTokenPrice": 55,
+    "noTokenPrice": 45
+  },
+  {
+    "id": 5,
+    "name": "Global temp +2°C in a decade ?",
+    "tag": "Environment",
+    "yes": 180,
+    "no": 120,
+    "totalBetPrice": 90000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 6,
+    "name": "Cryptocurrency B market cap ?",
+    "tag": "Crypto",
+    "yes": 90,
+    "no": 110,
+    "totalBetPrice": 45000,
+    "yesTokenPrice": 45,
+    "noTokenPrice": 55
+  },
+  {
+    "id": 7,
+    "name": "Manned Mars mission in 10 years ?",
+    "tag": "Space",
+    "yes": 150,
+    "no": 70,
+    "totalBetPrice": 70000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 8,
+    "name": "Gold >$2,000/oz by year end ?",
+    "tag": "Precious-metal",
+    "yes": 40,
+    "no": 60,
+    "totalBetPrice": 30000,
+    "yesTokenPrice": 60,
+    "noTokenPrice": 40
+  },
+  {
+    "id": 9,
+    "name": "Next Bond movie $1B gross ?",
+    "tag": "Entertainment",
+    "yes": 130,
+    "no": 70,
+    "totalBetPrice": 55000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 10,
+    "name": "Unemployment <5% in Country Z ?",
+    "tag": "Economy",
+    "yes": 110,
+    "no": 40,
+    "totalBetPrice": 50000,
+    "yesTokenPrice": 55,
+    "noTokenPrice": 45
+  },
+  {
+    "id": 11,
+    "name": "New disease treatment next year ?",
+    "tag": "Health",
+    "yes": 80,
+    "no": 30,
+    "totalBetPrice": 35000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 12,
+    "name": "Underdog wins next major sports event ?",
+    "tag": "Sports",
+    "yes": 70,
+    "no": 90,
+    "totalBetPrice": 40000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 13,
+    "name": "EVs >20% of total sales by 2030 ?",
+    "tag": "Automotive",
+    "yes": 160,
+    "no": 50,
+    "totalBetPrice": 60000,
+    "yesTokenPrice": 50,
+    "noTokenPrice": 50
+  },
+  {
+    "id": 14,
+    "name": "Stock market correction -10% in 6 months ?",
+    "tag": "Finance",
+    "yes": 100,
+    "no": 80,
+    "totalBetPrice": 45000,
+    "yesTokenPrice": 95,
+    "noTokenPrice": 5
+  },
+  {
+    "id": 15,
+    "name": "Tech surpassing blockchain in 2 years ?",
+    "tag": "Technology",
+    "yes": 50,
+    "no": 120,
+    "totalBetPrice": 35000,
+    "yesTokenPrice": 5,
+    "noTokenPrice": 95
+  }
+]

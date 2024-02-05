@@ -1,10 +1,13 @@
 .navbar {
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 10;
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid var(--onHover-color);
 }
 
 .bottom_bar {
   background-color: var(--secondary-color);
+  border-top: 1px solid var(--onHover-color);
   z-index: 10;
 }
 
@@ -37,11 +40,15 @@
   transform: scale(1.1);
 }
 
-.bottom_menu {
+.bottom_menu_options {
   color: rgba(0, 0, 0, 0.54);
   transition: all 50ms ease-in;
 }
 
-.bottom_menu:hover {
+.bottom_menu::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom_menu_options:hover {
   border-bottom: 3px solid var(--onHover-color);
 }
