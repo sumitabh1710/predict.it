@@ -112,7 +112,7 @@ const Navbar = () => {
                 color="action"
                 fontSize="medium"
               ></MenuOutlinedIcon>
-              {!menuPopUpShow && (
+              {menuPopUpShow && (
                 <PopUpHover
                   setMenuPopUpShow={setMenuPopUpShow}
                   menuPopUpShow={menuPopUpShow}

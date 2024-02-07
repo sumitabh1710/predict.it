@@ -16,11 +16,15 @@ const BottomModal = ({ showBottomModal, setShowBottomModal, children }) => {
 
   return (
     <div
-      className="bottom_modal absolute bottom-0 left-0 h-0 z-30 w-screen bg-white border-t-2 rounded-t-xl"
-      onClick={() => setShowBottomModal(false)}
+      className="bottom_modal absolute bottom-0 left-0 h-0 overflow-hidden z-30 w-screen bg-white border-t-2 rounded-t-xl"
       id="bottom_modal"
     >
-      <div className="h-1/3 w-full "></div>
+      <div className="h-full flex flex-col w-full p-4">
+        <div className="flex justify-end h-7 w-full text-xs text-gray-500 underline font-semibold">
+          <p onClick={() => setShowBottomModal(false)}>Close</p>
+        </div>
+        {children}
+      </div>
     </div>
   );
 };
