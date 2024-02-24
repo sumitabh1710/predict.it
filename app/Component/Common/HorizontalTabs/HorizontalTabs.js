@@ -38,11 +38,11 @@ const HorizontalTabs = () => {
       {horizontalTabsData.map((each) => {
         return (
           <div
-            className="tabs h-10 cursor-pointer mx-2 w-fit px-4 flex items-center justify-center"
-            style={{ borderRadius: "20px" }}
+            className="tabs cursor-pointer mx-2 w-fit flex items-center justify-center"
+            style={{ borderRadius: "8px" }}
             key={each.id}
           >
-            <p className="text-sm font-semibold text-slate-700" style={{ letterSpacing: "1px" }}>
+            <p className="text-sm font-semibold text-slate-700 px-3 py-2" style={{ letterSpacing: "1px" }}>
               {each.name}
             </p>
           </div>

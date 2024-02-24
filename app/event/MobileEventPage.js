@@ -6,6 +6,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import BottomModal from "@/app/Component/Common/BottomModal/BottomModal";
+import { useEffect } from "react";
 
 const MobileEventPage = ({
   eachMarketData,
@@ -37,9 +38,34 @@ const MobileEventPage = ({
     setBetQuantity((prevState) => prevState.slice(0, -1));
   };
 
+  useEffect(() => {
+    const orderBookContent = document.getElementById("order_book_content");
+    const dropdownArrow = document.getElementById("dropdown_arrow");
+    if (showOrderBook) {
+      orderBookContent.style.height = "324px";
+      dropdownArrow.style.transform = "rotate(180deg)";
+    } else {
+      orderBookContent.style.height = "0px";
+      dropdownArrow.style.transform = "rotate(0deg)";
+    }
+  }, [showOrderBook]);
+
+  useEffect(() => {
+    const popupBuyButton = document.getElementById("popup_buy_button");
+    const popupSellButton = document.getElementById("popup_sell_button");
+
+    if (isBuy) {
+      popupSellButton.classList.remove("button_active");
+      popupBuyButton.classList.add("button_active");
+    } else {
+      popupBuyButton.classList.remove("button_active");
+      popupSellButton.classList.add("button_active");
+    }
+  }, [isBuy]);
+
   return (
     <div>
-      <div className="min-h-screen flex flex-col p-4 md:px-10 bg-slate-50">
+      <div className="min-h-screen flex md:hidden flex-col p-4 md:px-10 bg-slate-50">
         <div className="w-full md:hidden flex items-start">
           <div className="w-1/6 h-12"></div>
           <div className="flex w-5/6">
@@ -187,7 +213,7 @@ const MobileEventPage = ({
           </div>
         </BottomModal>
       </div>
-      <div className="buy_sell_mobile_menu md:hidden h-20 w-full sticky bottom-0 z-10">
+      <div className="buy_sell_mobile_menu md:hidden h-20 w-full fixed bottom-0 z-10">
         <div className="px-5 py-4 flex items-center h-full">
           <div
             className="buy_button flex items-center justify-center text-base font-medium"

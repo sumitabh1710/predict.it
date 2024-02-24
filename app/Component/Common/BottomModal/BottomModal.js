@@ -16,7 +16,7 @@ const BottomModal = ({ showBottomModal, setShowBottomModal, children }) => {
 
   return (
     <div
-      className="bottom_modal absolute bottom-0 left-0 h-0 overflow-hidden z-30 w-screen bg-white border-t-2 rounded-t-xl"
+      className="bottom_modal fixed bottom-0 left-0 h-0 overflow-hidden z-30 w-screen bg-white border-t-2 rounded-t-xl"
       id="bottom_modal"
     >
       <div className="h-full flex flex-col w-full p-4">

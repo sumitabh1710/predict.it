@@ -12,7 +12,7 @@ const PopUpModal = ({ popUpModalShow, setPopUpModalShow, children }) => {
       }}
     >
       <div
-        className="bg-slate-50 rounded-xl p-3"
+        className="bg-white rounded-xl p-3 z-50"
         style={{ width: "450px", height: "410px" }}
       >
         {children}

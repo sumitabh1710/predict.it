@@ -25,15 +25,11 @@
 }
 
 body {
+  height: 100vh;
   color: rgb(var(--foreground-rgb));
-  background-color: black;
-  font-family: "Teko", sans-serif;
   transition: all 200ms ease-out;
+  overflow: hidden;
 }
-
-/* ::-webkit-scrollbar {
-  display: none;
-} */
 
 @layer utilities {
   .text-balance {

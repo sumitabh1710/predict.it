@@ -31,7 +31,6 @@
 .button_dark {
   color: whitesmoke;
   box-sizing: border-box;
-  box-shadow: 0 0 0 2px var(--primary-color);
   background: var(--primary-color);
   transition: all 200ms linear;
 }

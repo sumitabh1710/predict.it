@@ -6,9 +6,9 @@ import HomeIcon from "@mui/icons-material/Home";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "../../navbar/Navbar.css";
 
-const BottomMenu = () => {
+const BottomMenu = ({ setSideBarOpen, sideBarOpen }) => {
   return (
-    <div className="bottom_bar fixed flex justify-around bottom-0 h-16 w-full">
+    <div className="bottom_bar fixed flex md:hidden justify-around bottom-0 h-16 w-full">
       <div className="nav_menu flex flex-col justify-center items-center px-4 py-1 cursor-pointer">
         <HomeIcon color="action" fontSize="small"></HomeIcon>
         <p style={{ color: "hsla(236, 9%, 39%, 0.8)", fontSize: "12px" }}>
@@ -36,7 +36,12 @@ const BottomMenu = () => {
           Leaderboard
         </p>
       </div>
-      <div className="nav_menu flex flex-col justify-center items-center px-4 py-1 cursor-pointer">
+      <div
+        className="nav_menu flex flex-col justify-center items-center px-4 py-1 cursor-pointer"
+        onClick={() => {
+          setSideBarOpen(!sideBarOpen);
+        }}
+      >
         <MenuOutlinedIcon color="action" fontSize="small"></MenuOutlinedIcon>
         <p style={{ color: "hsla(236, 9%, 39%, 0.8)", fontSize: "12px" }}>
           Menu
