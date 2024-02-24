@@ -7,6 +7,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import BottomModal from "@/app/Component/Common/BottomModal/BottomModal";
 import { useEffect } from "react";
+import eventStyle from "./EventPage.module.css";
 
 const MobileEventPage = ({
   eachMarketData,
@@ -82,13 +83,13 @@ const MobileEventPage = ({
         <div className="flex md:hidden justify-center items-center w-full h-80 text-black bg-slate-300 my-5">
           graph
         </div>
-        <div className="order_book_dropdown md:hidden mt-4">
+        <div className={`${eventStyle.order_book_dropdown} md:hidden mt-4`}>
           <div className="flex items-center justify-between h-16 w-full">
             <p className="text-slate-900 text-lg font-semibold pl-4">
               Order Book
             </p>
             <div
-              className="dropdown_arrow px-3"
+              className={`${eventStyle.dropdown_arrow} px-3`}
               id="dropdown_arrow"
               onClick={() => setShowOrderBook(!showOrderBook)}
             >
@@ -96,7 +97,7 @@ const MobileEventPage = ({
             </div>
           </div>
           <div
-            className="order_book_content w-full"
+            className={`${eventStyle.order_book_content} w-full`}
             id="order_book_content"
           ></div>
         </div>
@@ -108,7 +109,7 @@ const MobileEventPage = ({
             <div className="flex items-center justify-between h-10 w-full">
               <div className="flex">
                 <div
-                  className="popup_buy_button rounded-2xl text-sm font-medium w-fit py-1 px-4"
+                  className={`${eventStyle.popup_buy_button} rounded-2xl text-sm font-medium w-fit py-1 px-4`}
                   id="popup_buy_button"
                   onClick={() => {
                     setIsBuy(true);
@@ -117,7 +118,7 @@ const MobileEventPage = ({
                   Buy
                 </div>
                 <div
-                  className="popup_sell_button rounded-2xl text-sm font-medium w-fit py-1 px-4 ml-2"
+                  className={`${eventStyle.popup_sell_button} rounded-2xl text-sm font-medium w-fit py-1 px-4 ml-2`}
                   id="popup_sell_button"
                   onClick={() => {
                     setIsBuy(false);
@@ -167,12 +168,24 @@ const MobileEventPage = ({
             </div>
             <div className="h-7 w-full my-4">
               {isBetYes ? (
-                <div className="flex items-center rounded yes_token h-full w-fit px-3 ml-1">
-                  <p className="yes_token_label text-sm font-medium">Yes</p>
+                <div
+                  className={`${eventStyle.yes_token} flex items-center rounded h-full w-fit px-3 ml-1`}
+                >
+                  <p
+                    className={`${eventStyle.yes_token_label} text-sm font-medium`}
+                  >
+                    Yes
+                  </p>
                 </div>
               ) : (
-                <div className="flex items-center rounded no_token h-full w-fit px-3">
-                  <p className="no_token_label text-sm font-medium">No</p>
+                <div
+                  className={`${eventStyle.no_token} flex items-center rounded h-full w-fit px-3`}
+                >
+                  <p
+                    className={`${eventStyle.no_token_label} text-sm font-medium`}
+                  >
+                    No
+                  </p>
                 </div>
               )}
             </div>
@@ -187,21 +200,23 @@ const MobileEventPage = ({
                 {betQuantity.length == 0 ? "0" : parseInt(betQuantity.join(""))}
               </p>
             </div>
-            <div className="submit_button flex justify-center items-center rounded my-2 h-10 w-full">
+            <div
+              className={`${eventStyle.submit_button} flex justify-center items-center rounded my-2 h-10 w-full`}
+            >
               Submit
             </div>
             <div className="h-80 w-full flex flex-wrap">
               {numbers.map((each, index) => (
                 <div
                   key={index}
-                  className="num_pad text-black text-lg font-mono font-semibold w-1/3 flex items-center justify-center"
+                  className={`${eventStyle.num_pad} text-black text-lg font-mono font-semibold w-1/3 flex items-center justify-center`}
                   onClick={() => handleClickNum(each)}
                 >
                   {each}
                 </div>
               ))}
               <div
-                className="num_pad w-1/3 flex items-center justify-center"
+                className={`${eventStyle.num_pad} w-1/3 flex items-center justify-center`}
                 onClick={() => handleClickBackSpace()}
               >
                 <ArrowBackIcon
@@ -213,10 +228,12 @@ const MobileEventPage = ({
           </div>
         </BottomModal>
       </div>
-      <div className="buy_sell_mobile_menu md:hidden h-20 w-full fixed bottom-0 z-10">
+      <div
+        className={`${eventStyle.buy_sell_mobile_menu} md:hidden h-20 w-full fixed bottom-0 z-10`}
+      >
         <div className="px-5 py-4 flex items-center h-full">
           <div
-            className="buy_button flex items-center justify-center text-base font-medium"
+            className={`${eventStyle.buy_button} flex items-center justify-center text-base font-medium`}
             style={{ flex: 2 }}
             onClick={() => {
               setShowBottomModal(true);
@@ -226,7 +243,7 @@ const MobileEventPage = ({
             Bet Yes {eachMarketData.yesTokenPrice}
           </div>
           <div
-            className="sell_button flex mx-2 items-center justify-center text-base font-medium"
+            className={`${eventStyle.sell_button} flex mx-2 items-center justify-center text-base font-medium`}
             style={{ flex: 2 }}
             onClick={() => {
               setShowBottomModal(true);
@@ -236,7 +253,9 @@ const MobileEventPage = ({
             Bet No {eachMarketData.yesTokenPrice}
           </div>
           <div className="flex-1 flex justify-center">
-            <div className="w-12 h-12 buy_sell_mobile_menu_options rounded-lg"></div>
+            <div
+              className={`${eventStyle.buy_sell_mobile_menu_options} w-12 h-12 rounded-lg`}
+            ></div>
           </div>
         </div>
       </div>

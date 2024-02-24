@@ -32,8 +32,6 @@ const Navbar = () => {
     { id: 9, name: "Pop Culture" },
   ];
 
-  const { windowWidth, windowHeight } = useWindowDimensions();
-
   const detectCurrentProvider = () => {
     let provider;
 
@@ -152,10 +150,8 @@ const Navbar = () => {
           >
             Sell
           </div>
-
-          {windowWidth > 768 && (
             <div
-              className="nav_menu relative flex flex-col justify-center cursor-pointer items-center px-3 py-2"
+              className="nav_menu hidden md:flex relative flex-col justify-center cursor-pointer items-center px-3 py-2"
               onMouseEnter={() => {
                 setMenuPopUpShow(true);
               }}
@@ -177,7 +173,6 @@ const Navbar = () => {
                 ></PopUpHover>
               )}
             </div>
-          )}
         </div>
       </div>
       <div className="bottom_menu flex overflow-scroll h-10 px-6 mt-3">
@@ -216,7 +211,7 @@ const Navbar = () => {
                       viewBox="0 0 212 189"
                       id="metamask"
                     >
-                      <g fill="none" fill-rule="evenodd">
+                      <g fill="none" fillRule="evenodd">
                         <polygon
                           fill="#CDBDB2"
                           points="60.75 173.25 88.313 180.563 88.313 171 90.563 168.75 106.313 168.75 106.313 180 106.313 187.875 89.438 187.875 68.625 178.875"

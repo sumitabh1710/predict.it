@@ -5,6 +5,7 @@
     "tag": "Finance",
     "yes": 120,
     "no": 80,
+    "img": "https://imgs.search.brave.com/C1XTzpKQhfwpBq8rxLo9__7XeNB2JmAhdrw1rWKfpSA/rs:fit:860:0:0/g:ce/aHR0cDovL2hvbGx5/d29vZGxpZmUuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE4/LzA2L2RvbmFsZC10/dW1wLWhhaXItZ2Fs/bGVyeS0xLWd0eS5q/cGc_dz02ODA",
     "totalBetPrice": 50000,
     "yesTokenPrice": 50,
     "noTokenPrice": 50
@@ -15,6 +16,7 @@
     "tag": "Politics",
     "yes": 200,
     "no": 150,
+    "img": "",
     "totalBetPrice": 75000,
     "yesTokenPrice": 40,
     "noTokenPrice": 60

@@ -68,7 +68,17 @@
   background-color: var(--primary-color);
 }
 
-.stickyBuySellTab {
+.sticky_buy_sell_tab {
   border: 1px solid var(--onHover-color);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stickey_tab_header {
+  border-bottom: 1px solid var(--onHover-color);
+}
+
+.price_share_counter {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--onHover-color);
 }

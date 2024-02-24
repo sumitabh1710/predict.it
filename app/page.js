@@ -27,7 +27,7 @@ export default async function Home() {
         <span className="flex px-1 h-fit py-3">
           <HorizontalTabs></HorizontalTabs>
         </span>
-        <div className="flex flex-wrap z-0">
+        <div className="flex flex-wrap justify-center z-0">
           {marketData.map((each) => (
             <Link
               className={`${homeStyles.marketTiles} h-48 w-full m-1 rounded-xl p-1 bg-white`}
@@ -38,7 +38,7 @@ export default async function Home() {
                 <div className="flex items-center justify-center h-full w-fit p-3">
                   <img
                     className="rounded-lg h-16 w-16"
-                    src="https://imgs.search.brave.com/C1XTzpKQhfwpBq8rxLo9__7XeNB2JmAhdrw1rWKfpSA/rs:fit:860:0:0/g:ce/aHR0cDovL2hvbGx5/d29vZGxpZmUuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE4/LzA2L2RvbmFsZC10/dW1wLWhhaXItZ2Fs/bGVyeS0xLWd0eS5q/cGc_dz02ODA"
+                    src="https://plus.unsplash.com/premium_photo-1668116307088-583ee0d4aaf7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   ></img>
                 </div>
                 <div className="flex flex-col justify-center h-full w-2/3 pl-2">
