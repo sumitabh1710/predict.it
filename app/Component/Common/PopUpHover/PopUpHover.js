@@ -10,16 +10,16 @@ const PopUpHover = ({
   setPopUpModalShow,
 }) => {
   return (
-    <div className="absolute top-0 right-0 h-fit w-fit z-10">
-      <div
-        className="popUp_hover h-fit w-40 mt-14 rounded-lg bg-slate-50"
-        onMouseEnter={() => {
-          setMenuPopUpShow(true);
-        }}
-        onMouseLeave={() => {
-          setMenuPopUpShow(false);
-        }}
-      >
+    <div
+      className="absolute top-3 right-5 h-fit w-fit"
+      onMouseEnter={() => {
+        setMenuPopUpShow(true);
+      }}
+      onMouseLeave={() => {
+        setMenuPopUpShow(false);
+      }}
+    >
+      <div className="popUp_hover h-fit w-40 mt-14 rounded-lg bg-slate-50">
         <div className="py-2 px-2">
           {!isConnected ? (
             <>
@@ -27,7 +27,7 @@ const PopUpHover = ({
                 className="popUp_button py-2 px-4 cursor-pointer rounded"
                 onClick={() => setPopUpModalShow(true)}
               >
-                <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+                <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
                   Sign Up
                 </p>
               </div>
@@ -35,7 +35,7 @@ const PopUpHover = ({
                 className="popUp_button py-2 px-4 cursor-pointer rounded"
                 onClick={() => setPopUpModalShow(true)}
               >
-                <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+                <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
                   Log In
                 </p>
               </div>
@@ -45,29 +45,29 @@ const PopUpHover = ({
               className="popUp_button py-2 px-4 cursor-pointer rounded"
               onClick={onDisconnect}
             >
-              <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+              <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
                 Log Out
               </p>
             </div>
           )}
           <hr className="my-2"></hr>
           <div className="popUp_button py-2 px-4 cursor-pointer rounded">
-            <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+            <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
               Contests
             </p>
           </div>
           <div className="popUp_button py-2 px-4 cursor-pointer rounded">
-            <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+            <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
               Learn
             </p>
           </div>
           <div className="popUp_button py-2 px-4 cursor-pointer rounded">
-            <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+            <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
               Blog
             </p>
           </div>
           <div className="popUp_button flex items-center justify-between py-2 px-4 cursor-pointer rounded">
-            <p className="text-sm" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
+            <p className="text-sm font-semibold" style={{ color: "rgba(0, 0, 0, 0.54)" }}>
               Dark Mode
             </p>
             <ToggleButton></ToggleButton>

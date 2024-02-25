@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import BottomModal from "@/app/Component/Common/BottomModal/BottomModal";
 import { useEffect } from "react";
 import eventStyle from "./EventPage.module.css";
+import OrderBookDropdown from "../Component/Common/OrderBookDropdown/OrderBookDropdown";
 
 const MobileEventPage = ({
   eachMarketData,
@@ -22,8 +23,6 @@ const MobileEventPage = ({
   isBetYes,
   setIsBuy,
   isBuy,
-  setShowOrderBook,
-  showOrderBook,
 }) => {
   const [showBottomModal, setShowBottomModal] = useState(false);
 
@@ -40,18 +39,6 @@ const MobileEventPage = ({
   };
 
   useEffect(() => {
-    const orderBookContent = document.getElementById("order_book_content");
-    const dropdownArrow = document.getElementById("dropdown_arrow");
-    if (showOrderBook) {
-      orderBookContent.style.height = "324px";
-      dropdownArrow.style.transform = "rotate(180deg)";
-    } else {
-      orderBookContent.style.height = "0px";
-      dropdownArrow.style.transform = "rotate(0deg)";
-    }
-  }, [showOrderBook]);
-
-  useEffect(() => {
     const popupBuyButton = document.getElementById("popup_buy_button");
     const popupSellButton = document.getElementById("popup_sell_button");
 
@@ -65,42 +52,25 @@ const MobileEventPage = ({
   }, [isBuy]);
 
   return (
-    <div>
+    <div className="relative w-full h-fit">
       <div className="min-h-screen flex md:hidden flex-col p-4 md:px-10 bg-slate-50">
         <div className="w-full md:hidden flex items-start">
           <div className="w-1/6 h-12"></div>
           <div className="flex w-5/6">
-            <p className="text-slate-700 tag_label text-sm font-sans font-medium">
+            <p className="text-slate-700 tag_label text-sm font-medium">
               {eachMarketData.tag}
             </p>
           </div>
         </div>
         <div className="">
-          <p className="text-slate-900 md:hidden text-xl font-sans font-semibold">
+          <p className="text-slate-900 md:hidden text-xl font-semibold">
             {eachMarketData.name}
           </p>
         </div>
         <div className="flex md:hidden justify-center items-center w-full h-80 text-black bg-slate-300 my-5">
           graph
         </div>
-        <div className={`${eventStyle.order_book_dropdown} md:hidden mt-4`}>
-          <div className="flex items-center justify-between h-16 w-full">
-            <p className="text-slate-900 text-lg font-semibold pl-4">
-              Order Book
-            </p>
-            <div
-              className={`${eventStyle.dropdown_arrow} px-3`}
-              id="dropdown_arrow"
-              onClick={() => setShowOrderBook(!showOrderBook)}
-            >
-              <ExpandMoreIcon color="action" fontSize="medium"></ExpandMoreIcon>
-            </div>
-          </div>
-          <div
-            className={`${eventStyle.order_book_content} w-full`}
-            id="order_book_content"
-          ></div>
-        </div>
+        <OrderBookDropdown></OrderBookDropdown>
         <BottomModal
           showBottomModal={showBottomModal}
           setShowBottomModal={setShowBottomModal}
@@ -196,7 +166,7 @@ const MobileEventPage = ({
                   fontSize="large"
                 ></AttachMoneyIcon>
               )}
-              <p className="text-black text-4xl font-mono font-semibold">
+              <p className="text-black text-4xl font-semibold">
                 {betQuantity.length == 0 ? "0" : parseInt(betQuantity.join(""))}
               </p>
             </div>
@@ -209,7 +179,7 @@ const MobileEventPage = ({
               {numbers.map((each, index) => (
                 <div
                   key={index}
-                  className={`${eventStyle.num_pad} text-black text-lg font-mono font-semibold w-1/3 flex items-center justify-center`}
+                  className={`${eventStyle.num_pad} text-black text-lg font-semibold w-1/3 flex items-center justify-center`}
                   onClick={() => handleClickNum(each)}
                 >
                   {each}
@@ -229,7 +199,7 @@ const MobileEventPage = ({
         </BottomModal>
       </div>
       <div
-        className={`${eventStyle.buy_sell_mobile_menu} md:hidden h-20 w-full fixed bottom-0 z-10`}
+        className={`${eventStyle.buy_sell_mobile_menu} md:hidden h-20 w-full fixed bottom-16 z-10`}
       >
         <div className="px-5 py-4 flex items-center h-full">
           <div

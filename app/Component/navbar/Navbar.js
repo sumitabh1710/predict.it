@@ -70,10 +70,10 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar md:h-1/5 h-1/6 flex flex-col justify-between w-full"
+      className="navbar relative h-1/6 flex flex-col justify-between w-full"
       id="navbar"
     >
-      <div className="flex flex-wrap px-6 py-4 md:pt-7 md:pb-0">
+      <div className="flex flex-wrap px-3 py-4 md:pt-4 md:pb-0">
         <div className="flex items-center justify-start w-1/2">
           <p className="title_nav font-mono text-3xl font-bold">Predict.it</p>
           <Searchbar></Searchbar>
@@ -82,7 +82,7 @@ const Navbar = () => {
           <div className="nav_menu md:flex hidden flex-col justify-center items-center px-4 py-1 cursor-pointer">
             <AppsSharpIcon color="action" fontSize="medium"></AppsSharpIcon>
             <p
-              className="font-extrabold"
+              className="font-semibold"
               style={{ color: "rgba(0, 0, 0, 0.54)", fontSize: "10px" }}
             >
               Markets
@@ -94,7 +94,7 @@ const Navbar = () => {
               fontSize="medium"
             ></ShowChartOutlinedIcon>
             <p
-              className="font-extrabold"
+              className="font-semibold"
               style={{ color: "rgba(0, 0, 0, 0.54)", fontSize: "10px" }}
             >
               Activity
@@ -106,7 +106,7 @@ const Navbar = () => {
               fontSize="medium"
             ></LeaderboardOutlinedIcon>
             <p
-              className="font-extrabold"
+              className="font-semibold"
               style={{ color: "rgba(0, 0, 0, 0.54)", fontSize: "10px" }}
             >
               Leaderboard
@@ -118,7 +118,7 @@ const Navbar = () => {
               fontSize="medium"
             ></LocalLibraryOutlinedIcon>
             <p
-              className="font-extrabold"
+              className="font-semibold"
               style={{ color: "rgba(0, 0, 0, 0.54)", fontSize: "10px" }}
             >
               Learn
@@ -150,29 +150,20 @@ const Navbar = () => {
           >
             Sell
           </div>
-            <div
-              className="nav_menu hidden md:flex relative flex-col justify-center cursor-pointer items-center px-3 py-2"
-              onMouseEnter={() => {
-                setMenuPopUpShow(true);
-              }}
-              onMouseLeave={() => {
-                setMenuPopUpShow(false);
-              }}
-            >
-              <MenuOutlinedIcon
-                color="action"
-                fontSize="medium"
-              ></MenuOutlinedIcon>
-              {menuPopUpShow && (
-                <PopUpHover
-                  setMenuPopUpShow={setMenuPopUpShow}
-                  menuPopUpShow={menuPopUpShow}
-                  isConnected={isConnected}
-                  onDisconnect={onDisconnect}
-                  setPopUpModalShow={setPopUpModalShow}
-                ></PopUpHover>
-              )}
-            </div>
+          <div
+            className="nav_menu hidden md:flex flex-col justify-center cursor-pointer items-center px-3 py-2"
+            onMouseEnter={() => {
+              setMenuPopUpShow(true);
+            }}
+            onMouseLeave={() => {
+              setMenuPopUpShow(false);
+            }}
+          >
+            <MenuOutlinedIcon
+              color="action"
+              fontSize="medium"
+            ></MenuOutlinedIcon>
+          </div>
         </div>
       </div>
       <div className="bottom_menu flex overflow-scroll h-10 px-6 mt-3">
@@ -348,6 +339,15 @@ const Navbar = () => {
             </div>
           </div>
         </PopUpModal>
+      )}
+      {menuPopUpShow && (
+        <PopUpHover
+          setMenuPopUpShow={setMenuPopUpShow}
+          menuPopUpShow={menuPopUpShow}
+          isConnected={isConnected}
+          onDisconnect={onDisconnect}
+          setPopUpModalShow={setPopUpModalShow}
+        ></PopUpHover>
       )}
     </div>
   );

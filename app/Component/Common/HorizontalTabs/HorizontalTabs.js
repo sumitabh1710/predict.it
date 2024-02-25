@@ -38,7 +38,7 @@ const HorizontalTabs = () => {
       {horizontalTabsData.map((each) => {
         return (
           <div
-            className="tabs cursor-pointer mx-2 w-fit flex items-center justify-center"
+            className="tabs cursor-pointer bg-slate-300  mx-2 w-fit flex items-center justify-center"
             style={{ borderRadius: "8px" }}
             key={each.id}
           >

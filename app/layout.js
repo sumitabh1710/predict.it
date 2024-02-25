@@ -17,13 +17,8 @@ export default function RootLayout({ children }) {
         <>
           <Navbar></Navbar>
         </>
-        <div className="md:h-4/5 h-5/6 overflow-y-scroll">{children}</div>
-        {/* <div className="">
-          <BottomMenu
-            setSideBarOpen={setSideBarOpen}
-            sideBarOpen={sideBarOpen}
-          ></BottomMenu>
-        </div> */}
+        <div className="h-5/6 overflow-y-scroll">{children}</div>
+        <BottomMenu></BottomMenu>
       </body>
     </html>
   );

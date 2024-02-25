@@ -13,12 +13,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import CachedIcon from "@mui/icons-material/Cached";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import OrderBookDropdown from "../Component/Common/OrderBookDropdown/OrderBookDropdown";
 
 export default function Event() {
   const searchParams = useSearchParams();
   const [eachMarketData, setEachMarketData] = useState({});
-  const { windowWidth, windowHeight } = useWindowDimensions();
-  const [showOrderBook, setShowOrderBook] = useState(false);
   const [isBuy, setIsBuy] = useState(true);
   const [isBetYes, setIsBetYes] = useState(true);
   const [betQuantity, setBetQuantity] = useState([]);
@@ -110,6 +109,9 @@ export default function Event() {
                 <LinkIcon color="action" fontSize="medium"></LinkIcon>
               </div>
             </div>
+            <div className="w-full py-6">
+              <OrderBookDropdown></OrderBookDropdown>
+            </div>
           </div>
           <div
             className="sticky h-fit w-1/3 top-10 right-20 z-0"
@@ -187,6 +189,7 @@ export default function Event() {
                     <p className="text-base font-medium">Buy</p>
                   </div>
                 </div>
+                <div className="pt-3 w-full h-20"></div>
               </div>
             </div>
           </div>
@@ -204,8 +207,6 @@ export default function Event() {
           isBetYes={isBetYes}
           setIsBuy={setIsBuy}
           isBuy={isBuy}
-          setShowOrderBook={setShowOrderBook}
-          showOrderBook={showOrderBook}
         ></MobileEventPage>
       </ThemeProvider>
     </>
